@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnership Deed Generator</title>
+</head>
+<body>
+    <h1>Partnership Deed Generator</h1>
+    <form action="/generate" method="POST">
+        <!-- Partner Information -->
+        <h2>Partner Information</h2>
+        {% for i in range(1, 5) %}
+        <div>
+            <label for="partner_name{{ i }}">Full Name:</label>
+            <input type="text" id="partner_name{{ i }}" name="partner_name{{ i }}" required>
+        </div>
+        <!-- Add fields for other partner details here -->
+        {% endfor %}
+
+        <!-- Partnership Details -->
+        <h2>Partnership Details</h2>
+        <div>
+            <label for="date">Date of Partnership:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <!-- Add fields for other partnership details here -->
+
+        <!-- Witness Information -->
+        <h2>Witness Information</h2>
+        {% for i in range(1, 3) %}
+        <div>
+            <label for="witness_name{{ i }}">Witness {{ i }} Full Name:</label>
+            <input type="text" id="witness_name{{ i }}" name="witness_name{{ i }}" required>
+        </div>
+        <!-- Add fields for other witness details here -->
+        {% endfor %}
+
+        <button type="submit">Generate Partnership Deed</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>create document</title>
+
+    <link rel="stylesheet" href="createDoc.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCfgrXT4Cr2XabWXaFx2_jjnNbRDygq0HY",
+        authDomain: "legalease-9ba88.firebaseapp.com",
+        projectId: "legalease-9ba88",
+        storageBucket: "legalease-9ba88.appspot.com",
+        messagingSenderId: "42151769696",
+        appId: "1:42151769696:web:3c087976fb24b421c5f505",
+        measurementId: "G-25N3MH9TT8"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </head>
+  <body>
+    <head>
+      <div>
+        <nav class="navBar">
+          <div class="left-items">
+            <ul class="nav-list">
+              <div class="logo">
+                <img class="img-con" src="images/logo.jpg" alt="" />
+              </div>
+              <li>LegalDocs</li>
+              <a class="home" href="index.html"><li>Home</li></a>
+              <li>contact us</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </head>
+
+    <main>
+      <div class="align selector-cont">
+        <div class="document-selector">
+          <h1>Select the type of your Document</h1>
+        </div>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Document
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a id="dropOpt" class="dropdown-item" href="#">
+                Deeds of partnership</a
+              >
+            </li>
+            <li><a id="dropOpt" class="dropdown-item" href="#">Contract</a></li>
+            <li><a id="dropOpt" class="dropdown-item" href="#">NOC</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Enter your Name</span>
+              <input type="text" placeholder="Enter your name" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Enter your partners name</span>
+              <input type="text" placeholder="Enter your username" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="email" placeholder="Enter your email" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input type="text" placeholder="Enter your number" required />
+            </div>
+            <div class="input-box">
+              <span class="details">adress</span>
+              <input type="password" placeholder="address" required />
+            </div>
+            <div class="input-box">
+              <span class="details">pin code</span>
+              <input type="number" placeholder="enter pin" required />
+            </div>
+          </div>
+          <div class="adress-details">
+            <span>Enter your adress</span>
+            <textarea name="" id="adress" cols="30" rows="10"></textarea>
+          </div>
+          <br />
+          <div class="button">
+            <input type="submit" value="submit" />
+            <div class="a-cont">
+              <a class="review" href="review.html">review document</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="createDoc.js"></script>
+  </body>
+</html>
